@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<!--     <PreferenceCategory android:key="account" android:title="Account"> -->
+<!--         <Preference  -->
+<!--             android:key="de.rub.dks.meshchat.ID"  -->
+<!--             android:title="@string/setting_hash"  -->
+<!--             android:summary="Generiert neuen Hashwert"  -->
+<!--             android:defaultValue="@string/hash"/> -->
+<!--         <EditTextPreference  -->
+<!--             android:dialogMessage="@string/setting_nickname"  -->
+<!--             android:dialogTitle="@string/setting_nickname"  -->
+<!--             android:title="@string/setting_nickname"  -->
+<!--             android:key="de.rub.dks.meshchat.nickname"  -->
+<!--             android:defaultValue="@string/nickname"/> -->
+<!--         <EditTextPreference  -->
+<!--             android:title="@string/settings_color"  -->
+<!--             android:summary="@string/color"  -->
+<!--             android:key="de.rub.dks.meshchat.ID_color"  -->
+<!--             android:dialogTitle="@string/settings_color" -->
+<!--             android:dialogMessage="Farbe als dezimal Zahl:"  -->
+<!--             android:defaultValue="@string/color"/> -->
+        
+<!--     </PreferenceCategory> -->
+<!--     <PreferenceCategory android:key="information" android:summary="This Application is designed and programmed by Tim Guenther and Max Hoffmann" android:title="Information"></PreferenceCategory> -->
+</PreferenceScreen>

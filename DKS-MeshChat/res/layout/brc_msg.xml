@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/brc_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#DD1C397B"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp" >
+
+    <TextView
+        android:id="@+id/brc_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFFFF"
+        android:text="" />
+
+<!--     <TextView -->
+<!--         android:id="@+id/date" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_marginLeft="10dp" -->
+<!--         android:layout_below="@id/message" -->
+<!--         android:gravity="right" -->
+<!--         android:layout_marginTop="5dp" -->
+<!--         android:text="Sa, 18.10.2014, 18:84" -->
+<!--         android:textAppearance="?android:attr/textAppearanceSmall" /> -->
+    
+</RelativeLayout>
+

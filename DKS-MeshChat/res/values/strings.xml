@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DKS-MeshChat</string>
+    
+    <string name="hash"></string>
+    <string name="nickname"></string>
+    <string name="color"></string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="action_account">Reset Account</string>
+    <string name="action_leave">leave</string>
+    
+    <string name="change_nickname">" has changed to "</string>
+    <string name="new_person">" is now in the chat."</string>
+    <string name="leave">" leaved the chat."</string>
+    
+    <string name="nickname_textedit_hint">Nickname</string>
+    <string name="init_description">"Please insert your nickname.\n A color is randomly choosed."</string>
+    <string name="create_account_btn">Creat Account</string>
+    <string name="contentDescription_logo">MeshChat-Logo</string>
+    
+    <string name="send_btn">send</string>
+    <string name="message_hint">Message&#8230;</string>
+<!--     <string name="setting_hash">Hash ändern</string> -->
+<!--     <string name="setting_nickname">Nickname ändern</string> -->
+<!--     <string name="settings_color">Farbe ändern</string> -->
+<!--     <string name="settings_storage">Spericherort ändern</string> -->
+<!--     <string name="settings_multicast_address">Multicastadresse ändern</string> -->
+
+</resources>
