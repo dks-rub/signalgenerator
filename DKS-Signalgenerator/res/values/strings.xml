@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DKS-Signalgenerator</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="action_about_us">About us</string>
+    <string name="action_help">Help</string>
+    
+    <string name="agb_title">Disclaimer</string>
+    <string name="agb_text">Please Note!\nThis is a Beta! Using the application on your own risk!\n\nPlease report problems to support@dks.rub.de\n\nHave fun!</string>
+    
+    <string name="signal_choice">Signal choice:</string>
+    <string name="signal_superpos_sound">Signal Superposition Sound:</string>
+    
+    <string name="sound_on">Sound ON</string>
+    <string name="sound_off">Sound OFF</string>
+    
+    <string name="phase_lable">Phase:</string>
+    <string name="freq_lable">"Freq:   "</string>
+    
+    <string name="phi_lable">\u03A6=</string>
+    <string name="x_lable">x=</string>
+    
+    <string name="hint_freq">0 \u2212 20</string>
+    <string name="hint_phase">0 \u2212 2</string>
+    
+    <string name="soundHz1">"Sound of the superpostion signal: "</string>
+    <string name="soundHz2">" Hz"</string>
+    
+    <string name="pi">\u03C0</string>
+    
+    <string name="graph_lable">Static signal 1 and modifiable signal 2:</string>
+    <string name="graph_sum_lable_1">"Superposition: Signal 1 "</string>
+    <string name="graph_sum_lable_2">" Signal 2"</string>
+    <string name="comming_soon">COMMING SOON:</string>
+    <string name="empty"></string>
+    
+    <string name="ic_signal_on">Signal show</string>
+    <string name="ic_signal_off">Signal hide</string>
+    <string name="ic_frequency_on">Frequecy show</string>
+    <string name="ic_frequency_off">Frequency hide</string>
+    <string name="ic_phase_on">Phase einblenden</string>
+    <string name="ic_phase_off">Phase hide</string>
+    <string name="ic_sound_on">Sound an</string>
+    <string name="ic_sound_off">Sound off</string>
+    
+    <string name="plus">\u002B</string>
+    <string name="minus">\u2212</string>
+    <string name="multiply">\u22C5</string>
+    <string name="divison">\u00F7</string>
+    
+    <string name="alert_title">Non-Warranty</string>
+    <string name="alert_text">Use at your own risk!\n\nThe chair of \"Digital Communicationsystems\" does not give any warrantys.</string>
+    <string name="alert_accept">Accept</string>
+    <string name="alert_decline">Decline</string>
+
+    <string name="html_about_us">
+        "<![CDATA[
+        <h1>Chair of Digital Communication Systems</h1>
+        <p>Our area of research is information transfer. Our main focus is the characterization of fundamental limits for reliable and spectrally efficient communication in the following areas (but not limited to)</p>
+		<ul>
+			<li>Interference Networks and Alignment</li>
+			<li>Robust Beamforming and applied optimization methods</li>
+			<li>Two-Way Full-Duplex Communication</li>
+			<li>Physical Layer Security</li>
+			<li>Relaying</li>
+			<li>Multiple antenna systems (MIMO) and Space-Time Coding</li>
+			<li>Device-to-Device (D2D)&nbsp; and low-latency communication</li>
+		</ul>
+		<p>As part of our integral approach, we complement the theory with the design of methods that approach those limits. The circle comes to a close by experiments making use of devices like</p>
+		
+		<ul>
+			<li>Universal Software Radio Peripheral (USRP)</li>
+			<li>Raspberry Pi and Arduino,</li>
+		</ul>
+		
+		<p>which are used for validation and for the development of realistic communication models. The websites provide a finer look at the nature of our interests and contributions.</p>
+        <br/>
+        <h2>SHK - Programming</h2>
+        <p>This Application is the result of two students, who work for the DCS.</p>
+        <a href=https://www.dks.ruhr-uni-bochum.de/de/lehrstuhl/>Tim Guenther</a>
+        <ul>
+        	<li>Management</li>
+        	<li>Design</li>
+        	<li>Programming</li>
+        </ul>
+        <a href=https://www.dks.ruhr-uni-bochum.de/de/lehrstuhl/>Max Hoffmann</a>
+        <ul>
+        	<li>Programming</li>
+        </ul>
+        <p>Questions or Feedback at <a href=mailto:support@dks.rub.de?subject=Questions: DKS-Signalgenerator>Support</a></p>
+        ]]>"</string>
+    
+</resources>
