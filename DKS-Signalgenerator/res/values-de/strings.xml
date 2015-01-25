@@ -88,5 +88,9 @@
         </ul>
         <p>Fragen zur Programmierung, Feedback oder Beschwerden bitte sofort an den <a href=mailto:support@dks.rub.de?subject=Fragen zum DKS-Signalgenerator>Support</a> richten.</p>
         ]]>"</string>
-
+        
+	<string name="update_error">Keine Verbindung zum Update Server!</string>
+    <string name="update_needed">Es gibt eine neuere Version der App! Bitte Update runterladen!</string>
+    <string name="alert_update">Update</string>
+    <string name="update_title">Update verfügbar</string>
 </resources>

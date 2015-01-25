@@ -92,4 +92,8 @@
         <p>Questions or Feedback at <a href=mailto:support@dks.rub.de?subject=Questions: DKS-Signalgenerator>Support</a></p>
         ]]>"</string>
     
+    <string name="update_error">Update Server not found!</string>
+    <string name="update_needed">There is a newer version of this app available! Please Update!</string>
+    <string name="alert_update">Update</string>
+    <string name="update_title">Update available</string>
 </resources>

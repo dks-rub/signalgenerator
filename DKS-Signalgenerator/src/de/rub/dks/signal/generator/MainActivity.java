@@ -13,6 +13,8 @@ import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -42,6 +44,7 @@ import com.jjoe64.graphview.GraphViewSeries.GraphViewSeriesStyle;
 import com.jjoe64.graphview.GraphViewStyle;
 import com.jjoe64.graphview.LineGraphView;
 
+import de.rub.dks.signal.generator.helper.UpdateHelper;
 import de.rub.dks.signal.generator.sound.OneSignal;
 import de.rub.dks.signal.generator.sound.RectangularSignal;
 import de.rub.dks.signal.generator.sound.SawtoothSignal;
@@ -148,7 +151,7 @@ public class MainActivity extends ActionBarActivity {
 		}
 		typing = false;
 	}
-
+	
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -156,6 +159,11 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 
 		SharedPreferences sPref = this.getSharedPreferences(sharedPref, Context.MODE_PRIVATE);
+		
+		// CHECK UPDATE
+		Handler mHandler = new Handler(Looper.getMainLooper());
+		UpdateHelper uh = new UpdateHelper(this, getString(R.string.app_name), mHandler);
+		uh.startThread();
 		
 		// Displays once a Disclaimer if accepted, else closes Application
 		if(sPref.getBoolean(agb, true)){
