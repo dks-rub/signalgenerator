@@ -30,6 +30,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -96,9 +97,13 @@ public class MainActivity extends ActionBarActivity {
 
 	private SeekBar freq_bar;
 	private SeekBar phase_bar;
+	private SeekBar freq_bar1;
 
 	private EditText freq_txt;
 	private EditText phase_txt;
+	private EditText freq_txt1;
+	
+	private Button equalButton;
 
 	private Signal signal1, signal2;
 	private ArithmeticSignal arithmeticSignal;
@@ -207,14 +212,17 @@ public class MainActivity extends ActionBarActivity {
 
 		freq_bar = (SeekBar) findViewById(R.id.frequency);
 		phase_bar = (SeekBar) findViewById(R.id.phase);
+		freq_bar1 = (SeekBar) findViewById(R.id.frequency1);
 
 		// Find the EditTexts
 		freq_txt = (EditText) findViewById(R.id.textFreq);
 		phase_txt = (EditText) findViewById(R.id.textPhase);
+		freq_txt1 = (EditText) findViewById(R.id.textFreq1);
 
 		// No focus at the start of the activity
 		freq_txt.clearFocus();
 		phase_txt.clearFocus();
+		freq_txt1.clearFocus();
 
 		// Spinner Adapter
 		ArrayAdapter<CharSequence> sig1_spinner_adapter = ArrayAdapter.createFromResource(this, R.array.signal1_array, android.R.layout.simple_spinner_item);
@@ -373,7 +381,8 @@ public class MainActivity extends ActionBarActivity {
 			public void afterTextChanged(Editable s) {
 			}
 		});
-
+		//TODO: freq_txt listener
+		
 		// Listener for focus
 		phase_txt.setOnFocusChangeListener(new OnFocusChangeListener() {
 			@Override
@@ -400,7 +409,9 @@ public class MainActivity extends ActionBarActivity {
 				}
 			}
 		});
-
+		
+		//TODO: freq_txt Listener
+		
 		// Listener for change on the Frequency-SeekBar
 		OnSeekBarChangeListener listener_freq = new OnSeekBarChangeListener() {
 			@Override
@@ -436,10 +447,17 @@ public class MainActivity extends ActionBarActivity {
 				recalculateGraphs();
 			}
 		};
+		
+		//TODO: freq_bar1 listener
 
 		// Set seekbars on their listeners
 		freq_bar.setOnSeekBarChangeListener(listener_freq);
 		phase_bar.setOnSeekBarChangeListener(listener_phase);
+		//TODO: freq_bar1.setOnSeekBarChangeListener(listerner_phase);
+		
+		//TODO: equalButton
+		equalButton = (Button) findViewById(R.id.equalButton);
+		
 
 		// Two Grids for displaying different sin curves
 		// Displays one static sin curve and one with alternating phase and
@@ -600,10 +618,14 @@ public class MainActivity extends ActionBarActivity {
 			if (toggleFrequency) {
 				item.setIcon(R.drawable.ic_action_frequnecy_white_on);
 				findViewById(R.id.freqContainer).setVisibility(View.VISIBLE);
+				findViewById(R.id.freqContainer1).setVisibility(View.VISIBLE);
+				findViewById(R.id.equalButton).setVisibility(View.VISIBLE);
 				toggleFrequency = !toggleFrequency;
 			} else {
 				item.setIcon(R.drawable.ic_action_frequnecy_white_off);
 				findViewById(R.id.freqContainer).setVisibility(View.GONE);
+				findViewById(R.id.freqContainer1).setVisibility(View.GONE);
+				findViewById(R.id.equalButton).setVisibility(View.GONE);
 				toggleFrequency = !toggleFrequency;
 			}
 			return true;

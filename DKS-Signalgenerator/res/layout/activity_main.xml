@@ -63,11 +63,54 @@
        </LinearLayout>
        
     </RelativeLayout>
+    
+  <LinearLayout 
+        android:id="@+id/freqContainer1" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/selectorContainer">
+        
+        <TextView 
+            android:id="@+id/textViewFreq1" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:text="@string/freq_lable"
+            android:textColor="#000000" />
+
+        <SeekBar 
+            android:id="@+id/frequency1" 
+            android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1" 
+            android:max="10000" />
+        
+        <TextView 
+            android:id="@+id/textViewFreqSymbol1" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/x_lable" />
+
+        <EditText 
+            android:id="@+id/textFreq1" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:ems="4" 
+            android:hint="@string/hint_freq" 
+            android:inputType="numberDecimal" />
+
+        <TextView 
+            android:id="@+id/textView3" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/pi" />
+        
+    </LinearLayout>
+    
     <LinearLayout 
         android:id="@+id/freqContainer" 
         android:layout_width="match_parent" 
         android:layout_height="wrap_content" 
-        android:layout_below="@id/selectorContainer">
+        android:layout_below="@id/freqContainer1">
         
         <TextView 
             android:id="@+id/textViewFreq" 
@@ -146,14 +189,25 @@
             android:text="@string/pi" />
 
     </LinearLayout>
-
     
+    <LinearLayout android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/phaseContainer"
+        android:baselineAligned="false"
+        android:orientation="vertical"  >
+        
+        <Button android:id="@+id/equalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="f1 = f2"/>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/graphContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/phaseContainer"
+        android:layout_below="@id/buttonContainer"
         android:baselineAligned="false"
         android:orientation="vertical"  >
 
