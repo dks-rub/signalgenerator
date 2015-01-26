@@ -212,17 +212,17 @@ public class MainActivity extends ActionBarActivity {
 
 		freq_bar = (SeekBar) findViewById(R.id.frequency);
 		phase_bar = (SeekBar) findViewById(R.id.phase);
-		freq_bar1 = (SeekBar) findViewById(R.id.frequency1);
+		//TODO: freq_bar1 = (SeekBar) findViewById(R.id.frequency1);
 
 		// Find the EditTexts
 		freq_txt = (EditText) findViewById(R.id.textFreq);
 		phase_txt = (EditText) findViewById(R.id.textPhase);
-		freq_txt1 = (EditText) findViewById(R.id.textFreq1);
+		//TODO: freq_txt1 = (EditText) findViewById(R.id.textFreq1);
 
 		// No focus at the start of the activity
 		freq_txt.clearFocus();
 		phase_txt.clearFocus();
-		freq_txt1.clearFocus();
+		//TODO: freq_txt1.clearFocus();
 
 		// Spinner Adapter
 		ArrayAdapter<CharSequence> sig1_spinner_adapter = ArrayAdapter.createFromResource(this, R.array.signal1_array, android.R.layout.simple_spinner_item);
