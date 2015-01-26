@@ -87,7 +87,7 @@ public class MainActivity extends ActionBarActivity {
 	private boolean isRunning = true;
 	private Thread t = null;
 
-	private double selectedFreq, selectedPhase;
+	private double selectedFreq, selectedFreq1, selectedPhase;
 	private boolean actionByCode, typing = false;
 	private boolean toggleSignal = false, togglePhase = false, toggleFrequency = false, toggleSound = false;
 
@@ -103,7 +103,7 @@ public class MainActivity extends ActionBarActivity {
 	private EditText phase_txt;
 	private EditText freq_txt1;
 	
-	private Button equalButton;
+	//TODO: private Button equalButton;
 
 	private Signal signal1, signal2;
 	private ArithmeticSignal arithmeticSignal;
@@ -142,7 +142,8 @@ public class MainActivity extends ActionBarActivity {
 		GraphViewData[] data = signal2.getGraphData(selectedFreq, selectedPhase);
 		seriesSinMod.resetData(data);
 
-		data = signal1.getGraphData(2 * Math.PI, 0);
+		//TODO: data = signal1.getGraphData(2 * Math.PI, 0);
+		data = signal1.getGraphData(selectedFreq1, 0);
 		seriesSinStatic.resetData(data);
 
 		data = arithmeticSignal.getGraphData();
@@ -152,6 +153,7 @@ public class MainActivity extends ActionBarActivity {
 			actionByCode = true;
 			phase_txt.setText("" + round(selectedPhase / Math.PI));
 			freq_txt.setText("" + round(selectedFreq / Math.PI));
+			freq_txt1.setText("" + round(selectedFreq1 / Math.PI));
 			actionByCode = false;
 		}
 		typing = false;
@@ -212,17 +214,17 @@ public class MainActivity extends ActionBarActivity {
 
 		freq_bar = (SeekBar) findViewById(R.id.frequency);
 		phase_bar = (SeekBar) findViewById(R.id.phase);
-		//TODO: freq_bar1 = (SeekBar) findViewById(R.id.frequency1);
+		freq_bar1 = (SeekBar) findViewById(R.id.frequency1);
 
 		// Find the EditTexts
 		freq_txt = (EditText) findViewById(R.id.textFreq);
 		phase_txt = (EditText) findViewById(R.id.textPhase);
-		//TODO: freq_txt1 = (EditText) findViewById(R.id.textFreq1);
+		freq_txt1 = (EditText) findViewById(R.id.textFreq1);
 
 		// No focus at the start of the activity
 		freq_txt.clearFocus();
 		phase_txt.clearFocus();
-		//TODO: freq_txt1.clearFocus();
+		freq_txt1.clearFocus();
 
 		// Spinner Adapter
 		ArrayAdapter<CharSequence> sig1_spinner_adapter = ArrayAdapter.createFromResource(this, R.array.signal1_array, android.R.layout.simple_spinner_item);
@@ -381,7 +383,40 @@ public class MainActivity extends ActionBarActivity {
 			public void afterTextChanged(Editable s) {
 			}
 		});
+		
 		//TODO: freq_txt listener
+		freq_txt1.addTextChangedListener(new TextWatcher() {
+			
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				if (actionByCode)
+					return;
+				int pos = 0;
+				try {
+					selectedFreq1 = Double.parseDouble(s.toString()) * Math.PI;
+					// Reduce value to max/min
+					if (selectedFreq1 > MAX_FREQ)
+						selectedFreq1 = MAX_FREQ;
+					if (selectedFreq1 < MIN_FREQ)
+						selectedFreq1 = MIN_FREQ;
+					// Calculate position of SeekBar adjuster
+					pos = (int) ((selectedFreq1 - MIN_FREQ) * freq_bar1.getMax() / (MAX_FREQ - MIN_FREQ));
+					typing = true;
+				} catch (Exception e) {
+				}
+				freq_bar1.setProgress(pos);
+				
+			}
+			
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {				
+			}
+			
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+		});
 		
 		// Listener for focus
 		phase_txt.setOnFocusChangeListener(new OnFocusChangeListener() {
@@ -411,6 +446,18 @@ public class MainActivity extends ActionBarActivity {
 		});
 		
 		//TODO: freq_txt Listener
+		freq_txt1.setOnFocusChangeListener(new OnFocusChangeListener() {
+
+			@Override
+			public void onFocusChange(View v, boolean hasFocus) {
+				// Replaces input-value with rounded or max/min value
+				if (!hasFocus) {
+					actionByCode = true;
+					freq_txt1.setText("" + round(selectedFreq1 / Math.PI));
+					actionByCode = false;
+				}
+			}
+		});
 		
 		// Listener for change on the Frequency-SeekBar
 		OnSeekBarChangeListener listener_freq = new OnSeekBarChangeListener() {
@@ -426,7 +473,7 @@ public class MainActivity extends ActionBarActivity {
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 				selectedFreq = (MAX_FREQ - MIN_FREQ) * progress / seekBar.getMax() + MIN_FREQ;
 				TextView t = (TextView) findViewById(R.id.soundHz_edit);
-				t.setText("" + round(selectedFreq / Math.PI * 100));
+				t.setText("" + round((selectedFreq+selectedFreq1) / Math.PI * 100));
 				recalculateGraphs();
 			}
 		};
@@ -449,14 +496,31 @@ public class MainActivity extends ActionBarActivity {
 		};
 		
 		//TODO: freq_bar1 listener
+		OnSeekBarChangeListener listener_freq1 = new OnSeekBarChangeListener() {
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
+			}
 
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+			}
+
+			@Override
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+				selectedFreq1 = (MAX_FREQ - MIN_FREQ) * progress / seekBar.getMax() + MIN_FREQ;
+				TextView t = (TextView) findViewById(R.id.soundHz_edit);
+				t.setText("" + round((selectedFreq1+selectedFreq1) / Math.PI * 100));
+				recalculateGraphs();
+			}
+		};
+		
 		// Set seekbars on their listeners
 		freq_bar.setOnSeekBarChangeListener(listener_freq);
 		phase_bar.setOnSeekBarChangeListener(listener_phase);
-		//TODO: freq_bar1.setOnSeekBarChangeListener(listerner_phase);
+		freq_bar1.setOnSeekBarChangeListener(listener_freq1);
 		
 		//TODO: equalButton
-		equalButton = (Button) findViewById(R.id.equalButton);
+		//equalButton = (Button) findViewById(R.id.equalButton);
 		
 
 		// Two Grids for displaying different sin curves
