@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.Window;
 import android.view.WindowManager;
@@ -103,7 +104,7 @@ public class MainActivity extends ActionBarActivity {
 	private EditText phase_txt;
 	private EditText freq_txt1;
 	
-	//TODO: private Button equalButton;
+	private Button equalButton;
 
 	private Signal signal1, signal2;
 	private ArithmeticSignal arithmeticSignal;
@@ -142,7 +143,6 @@ public class MainActivity extends ActionBarActivity {
 		GraphViewData[] data = signal2.getGraphData(selectedFreq, selectedPhase);
 		seriesSinMod.resetData(data);
 
-		//TODO: data = signal1.getGraphData(2 * Math.PI, 0);
 		data = signal1.getGraphData(selectedFreq1, 0);
 		seriesSinStatic.resetData(data);
 
@@ -240,20 +240,45 @@ public class MainActivity extends ActionBarActivity {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				signal1 = new ZeroSignal(); // default: zero
-				if (position == 1)
+				if (position == 1){
 					signal1 = new SinusSignal();
-				else if (position == 2)
+					findViewById(R.id.freqContainer1).setVisibility(View.VISIBLE);
+					findViewById(R.id.equalButton).setVisibility(View.VISIBLE);
+				}else if (position == 2){
 					signal1 = new RectangularSignal();
-				else if (position == 3)
+					findViewById(R.id.freqContainer1).setVisibility(View.GONE);
+					findViewById(R.id.equalButton).setVisibility(View.VISIBLE);
+					selectedFreq1 = 2*Math.PI;
+				}else if (position == 3){
 					signal1 = new SawtoothSignal();
-				else if (position == 4)
+					findViewById(R.id.freqContainer1).setVisibility(View.GONE);
+					findViewById(R.id.equalButton).setVisibility(View.VISIBLE);
+					selectedFreq1 = 2*Math.PI;
+				}else if (position == 4){
 					signal1 = new TriangularSignal();
-				else if (position == 5)
+					findViewById(R.id.freqContainer1).setVisibility(View.GONE);
+					findViewById(R.id.equalButton).setVisibility(View.VISIBLE);
+					selectedFreq1 = 2*Math.PI;
+				}else if (position == 5){
 					signal1 = new SiSignal();
-				else if (position == 6)
+					findViewById(R.id.freqContainer1).setVisibility(View.GONE);
+					findViewById(R.id.equalButton).setVisibility(View.VISIBLE);
+					selectedFreq1 = 2*Math.PI;
+				}else if (position == 6){
 					signal1 = new OneSignal();
-				else if (position == 7)
+					findViewById(R.id.freqContainer1).setVisibility(View.GONE);
+					findViewById(R.id.equalButton).setVisibility(View.VISIBLE);
+					selectedFreq1 = 2*Math.PI;
+				}else if (position == 7){
 					signal1 = new ZeroSignal();
+					findViewById(R.id.freqContainer1).setVisibility(View.GONE);
+					findViewById(R.id.equalButton).setVisibility(View.VISIBLE);
+					selectedFreq1 = 2*Math.PI;
+				}else{
+					findViewById(R.id.freqContainer1).setVisibility(View.GONE);
+					findViewById(R.id.equalButton).setVisibility(View.GONE);
+					selectedFreq1 = 0;
+				}
 				arithmeticSignal.setSignalA(signal1);
 				recalculateGraphs();
 			}
@@ -520,7 +545,17 @@ public class MainActivity extends ActionBarActivity {
 		freq_bar1.setOnSeekBarChangeListener(listener_freq1);
 		
 		//TODO: equalButton
-		//equalButton = (Button) findViewById(R.id.equalButton);
+		//Set freq:sig2 to freq:sig1
+		equalButton = (Button) findViewById(R.id.equalButton);
+		equalButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				String str = freq_txt1.getText().toString();
+				freq_txt.setText(freq_txt1.getText());
+				//freq_bar.setProgress((int) ((Double.parseDouble(str) - MIN_FREQ) * freq_bar1.getMax() / (MAX_FREQ - MIN_FREQ)));
+			}
+		});
 		
 
 		// Two Grids for displaying different sin curves
@@ -681,14 +716,12 @@ public class MainActivity extends ActionBarActivity {
 		} else if (item.getItemId() == R.id.action_freqnecy) {
 			if (toggleFrequency) {
 				item.setIcon(R.drawable.ic_action_frequnecy_white_on);
-				findViewById(R.id.freqContainer).setVisibility(View.VISIBLE);
-				findViewById(R.id.freqContainer1).setVisibility(View.VISIBLE);
+				findViewById(R.id.freq_buttonContainer).setVisibility(View.VISIBLE);
 				findViewById(R.id.equalButton).setVisibility(View.VISIBLE);
 				toggleFrequency = !toggleFrequency;
 			} else {
 				item.setIcon(R.drawable.ic_action_frequnecy_white_off);
-				findViewById(R.id.freqContainer).setVisibility(View.GONE);
-				findViewById(R.id.freqContainer1).setVisibility(View.GONE);
+				findViewById(R.id.freq_buttonContainer).setVisibility(View.GONE);
 				findViewById(R.id.equalButton).setVisibility(View.GONE);
 				toggleFrequency = !toggleFrequency;
 			}

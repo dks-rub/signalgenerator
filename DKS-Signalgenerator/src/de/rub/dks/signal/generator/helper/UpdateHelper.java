@@ -26,7 +26,7 @@ import android.widget.Toast;
 import de.rub.dks.signal.generator.R;
 
 public class UpdateHelper {
-	private final static String SERVERNAME = "http://192.168.178.30/update_android.php"; // Update webservice
+	private final static String SERVERNAME = "http://pgfplots.dks.ruhr-uni-bochum.de/update_android.php"; // Update webservice
 	private final static String SERVER = "https://www.dks.ruhr-uni-bochum.de/de/"; // Update website
 	private final static String VALUE_KEY = "version";
 	
