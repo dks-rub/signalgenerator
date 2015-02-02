@@ -82,7 +82,7 @@ public class MainActivity extends ActionBarActivity {
 	private GraphViewSeries seriesSum;
 
 	// Constants
-	private final static double MIN_FREQ = 0, MAX_FREQ = 20 * Math.PI, MIN_PHASE = 0, MAX_PHASE = 2 * Math.PI;
+	private final static double MIN_FREQ = 0, MAX_FREQ = 50 * Math.PI, MIN_PHASE = 0, MAX_PHASE = 2 * Math.PI;
 	private static int LAYOUT_SIZE;
 
 	private boolean isRunning = true;

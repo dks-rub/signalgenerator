@@ -35,14 +35,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-
+        
         <Button
-            android:id="@+id/equalButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="x1=x2"
-            android:textSize="12sp" />
+                android:id="@+id/equalButton"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="a=b"
+                android:textSize="12sp" />
 
         <LinearLayout
             android:id="@+id/SoundContainer"
@@ -117,7 +117,7 @@
                     android:id="@+id/textViewFreqSymbol1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/x_lable" />
+                    android:text="a=" />
 
                 <EditText
                     android:id="@+id/textFreq1"
@@ -159,7 +159,8 @@
                     android:id="@+id/textViewFreqSymbol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/x_lable" />
+                    android:text="@string/x_lable"
+                    android:textColor="#0000FF" />
 
                 <EditText
                     android:id="@+id/textFreq"
@@ -202,7 +203,8 @@
             android:id="@+id/textViewPhaseSymbol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/phi_lable" />
+            android:text="@string/phi_lable"
+            android:textColor="#0000FF" />
 
         <EditText
             android:id="@+id/textPhase"

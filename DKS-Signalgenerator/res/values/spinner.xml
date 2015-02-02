@@ -2,7 +2,7 @@
 <resources>
     <string-array name="signal1_array">
         <item>Signal 1 &#8230;</item>
-        <item>sin(x)</item>
+        <item>sin(ax)</item>
         <item>rect(x/2\u03C0)</item>
         <item>sawtooth(x/2\u03C0)</item>
         <item>triangle(x/2\u03C0)</item>
@@ -13,11 +13,11 @@
     
     <string-array name="signal2_array">
         <item>Signal 2 &#8230;</item>
-        <item>sin(x+\u03A6)</item>
-        <item>rect(x+\u03A6)</item>
-        <item>sawtooth(x+\u03A6)</item>
-        <item>triangle(x+\u03A6)</item>
-        <item>si(2\u03C0(x-\u03A6))</item>
+        <item>sin(bx+\u03A6)</item>
+        <item>rect(bx+\u03A6)</item>
+        <item>sawtooth(bx+\u03A6)</item>
+        <item>triangle(bx+\u03A6)</item>
+        <item>si(2\u03C0(bx-\u03A6))</item>
         <item>111&#8230;</item>
         <item>000&#8230;</item>
     </string-array>

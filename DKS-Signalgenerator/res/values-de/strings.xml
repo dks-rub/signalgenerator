@@ -16,13 +16,13 @@
     <string name="sound_on">Sound ON</string>
     <string name="sound_off">Sound OFF</string>
     
-    <string name="phase_lable">Phase:</string>
-    <string name="freq_lable">"Freq:   "</string>
+    <string name="phase_lable">"Phase:  "</string>
+    <string name="freq_lable">  Periode:</string>
     
     <string name="phi_lable">\u03A6=</string>
-    <string name="x_lable">x=</string>
+    <string name="x_lable">b=</string>
     
-    <string name="hint_freq">0 \u2212 20</string>
+    <string name="hint_freq">0 \u2212 50</string>
     <string name="hint_phase">0 \u2212 2</string>
     
     <string name="soundHz1">"Ton des superpositionierten Signals: "</string>
