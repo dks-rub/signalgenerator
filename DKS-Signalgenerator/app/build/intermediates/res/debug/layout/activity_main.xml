@@ -1,0 +1,250 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="de.rub.dks.signal.generator.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/selectorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/signalContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" >
+
+            <Spinner
+                android:id="@+id/signal1Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/superposOperationSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/signal2Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        
+        <Button
+                android:id="@+id/equalButton"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="a=b"
+                android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/SoundContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signalContainer"
+            android:layout_centerInParent="true"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/soundHz1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/soundHz1"
+                android:textColor="#FF00" />
+
+            <TextView
+                android:id="@+id/soundHz_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#FF00" />
+
+            <TextView
+                android:id="@+id/soundHz2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/soundHz2"
+                android:textColor="#FF00" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/freq_buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectorContainer"
+        android:gravity="end"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/freq_allContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selectorContainer"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/freqContainer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectorContainer"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/textViewFreq1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/freq_lable"
+                    android:textColor="#000000" />
+
+                <SeekBar
+                    android:id="@+id/frequency1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="10000" />
+
+                <TextView
+                    android:id="@+id/textViewFreqSymbol1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a=" />
+
+                <EditText
+                    android:id="@+id/textFreq1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="4"
+                    android:hint="@string/hint_freq"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pi" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/freqContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/freqContainer1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textViewFreq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/freq_lable"
+                    android:textColor="#0000FF" />
+
+                <SeekBar
+                    android:id="@+id/frequency"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="10000" />
+
+                <TextView
+                    android:id="@+id/textViewFreqSymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/x_lable"
+                    android:textColor="#0000FF" />
+
+                <EditText
+                    android:id="@+id/textFreq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="4"
+                    android:hint="@string/hint_freq"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pi" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phaseContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/freq_buttonContainer" >
+
+        <TextView
+            android:id="@+id/textViewPhase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phase_lable"
+            android:textColor="#0000FF" />
+
+        <SeekBar
+            android:id="@+id/phase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="10000" />
+
+        <TextView
+            android:id="@+id/textViewPhaseSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phi_lable"
+            android:textColor="#0000FF" />
+
+        <EditText
+            android:id="@+id/textPhase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:hint="@string/hint_phase"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@id/textFreq" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/graphContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/phaseContainer"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutGraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutSumGraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/desktop/Documents/git/DKS-Signalgenerator/app/src/main/res/layout/activity_main.xml -->

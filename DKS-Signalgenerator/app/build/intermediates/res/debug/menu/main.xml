@@ -1,0 +1,45 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+	
+    <item
+        android:id="@+id/action_signal"
+        android:title="Signal auswahl"
+        android:icon="@drawable/ic_action_signal_white_on"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_freqnecy"
+        android:title="Frequenzverschiebung"
+        android:icon="@drawable/ic_action_frequnecy_white_on"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_phase"
+        android:title="Phasenverschiebung"
+        android:icon="@drawable/ic_action_phase_white_on"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_sound"
+        android:title="Sound an"
+        android:icon="@drawable/ic_action_sound_white_off"
+        app:showAsAction="ifRoom"/>
+    
+<!--     <item -->
+<!--         android:id="@+id/action_settings" -->
+<!--         android:orderInCategory="100" -->
+<!--         android:title="@string/action_settings" -->
+<!--         app:showAsAction="never"/> -->
+    
+    <item
+        android:id="@+id/action_about_us"
+        android:orderInCategory="100"
+        android:title="@string/action_about_us"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="100"
+        android:title="@string/action_help"
+        app:showAsAction="never"/>
+
+</menu>
+<!-- From: file:/C:/Users/desktop/Documents/git/DKS-Signalgenerator/app/src/main/res/menu/main.xml -->

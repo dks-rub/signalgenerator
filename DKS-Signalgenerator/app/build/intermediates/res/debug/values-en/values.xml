@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/desktop/Documents/git/DKS-Signalgenerator/app/src/main/res/values-en/spinner.xml -->
+    <eat-comment/>
+    <string-array name="operation_array">
+    	<item>\u002B</item>
+    	<item>\u2212</item>
+    	<item>\u22C5</item>
+    	<item>\u00F7</item>
+    </string-array>
+    <string-array name="signal1_array">
+        <item>Signal 1 …</item>
+        <item>sin(ax)</item>
+        <item>rect(x/2\u03C0)</item>
+        <item>sawtooth(x/2\u03C0)</item>
+        <item>triangle(x/2\u03C0)</item>
+        <item>si(2\u03C0x)</item>
+        <item>111…</item>
+        <item>000…</item>
+    </string-array>
+    <string-array name="signal2_array">
+        <item>Signal 2 …</item>
+        <item>sin(bx+\u03A6)</item>
+        <item>rect(bx+\u03A6)</item>
+        <item>sawtooth(bx+\u03A6)</item>
+        <item>triangle(bx+\u03A6)</item>
+        <item>si(2\u03C0(bx-\u03A6))</item>
+        <item>111…</item>
+        <item>000…</item>
+    </string-array>
+    <!-- From: file:/C:/Users/desktop/Documents/git/DKS-Signalgenerator/app/src/main/res/values-en/strings.xml -->
+    <eat-comment/>
+    <string name="action_about_us">About us</string>
+    <string name="action_help">Help</string>
+    <string name="action_settings">Settings</string>
+    <string name="agb_text">Please Note!\nThis is a Beta! Using the application on your own risk!\n\nPlease report problems to support@dks.rub.de\n\nHave fun!</string>
+    <string name="agb_title">Disclaimer</string>
+    <string name="alert_accept">Accept</string>
+    <string name="alert_decline">Decline</string>
+    <string name="alert_text">Use at your own risk!\n\nThe chair of \"Digital Communicationsystems\" does not give any warrantys.</string>
+    <string name="alert_title">Non-Warranty</string>
+    <string name="alert_update">Update</string>
+    <string name="app_name">DKS-Signalgenerator</string>
+    <string name="comming_soon">COMMING SOON:</string>
+    <string name="divison">\u00F7</string>
+    <string name="empty"/>
+    <string name="freq_lable"> "Periode:"</string>
+    <string name="graph_lable">Static signal 1 and modifiable signal 2:</string>
+    <string name="graph_sum_lable_1">"Superposition: Signal 1 "</string>
+    <string name="graph_sum_lable_2">" Signal 2"</string>
+    <string name="hint_freq">0 \u2212 50</string>
+    <string name="hint_phase">0 \u2212 2</string>
+    <string name="html_about_us">
+        "<![CDATA[
+        <h1>Chair of Digital Communication Systems</h1>
+        <p>Our area of research is information transfer. Our main focus is the characterization of fundamental limits for reliable and spectrally efficient communication in the following areas (but not limited to)</p>
+		<ul>
+			<li>Interference Networks and Alignment</li>
+			<li>Robust Beamforming and applied optimization methods</li>
+			<li>Two-Way Full-Duplex Communication</li>
+			<li>Physical Layer Security</li>
+			<li>Relaying</li>
+			<li>Multiple antenna systems (MIMO) and Space-Time Coding</li>
+			<li>Device-to-Device (D2D)&nbsp; and low-latency communication</li>
+		</ul>
+		<p>As part of our integral approach, we complement the theory with the design of methods that approach those limits. The circle comes to a close by experiments making use of devices like</p>
+		
+		<ul>
+			<li>Universal Software Radio Peripheral (USRP)</li>
+			<li>Raspberry Pi and Arduino,</li>
+		</ul>
+		
+		<p>which are used for validation and for the development of realistic communication models. The websites provide a finer look at the nature of our interests and contributions.</p>
+        <br/>
+        <h2>SHK - Programming</h2>
+        <p>This Application is the result of two students, who work for the DCS.</p>
+        <a href=https://www.dks.ruhr-uni-bochum.de/de/lehrstuhl/>Tim Guenther</a>
+        <ul>
+        	<li>Management</li>
+        	<li>Design</li>
+        	<li>Programming</li>
+        </ul>
+        <a href=https://www.dks.ruhr-uni-bochum.de/de/lehrstuhl/>Max Hoffmann</a>
+        <ul>
+        	<li>Programming</li>
+        </ul>
+        <p>Questions or Feedback at <a href=mailto:support@dks.rub.de?subject=Questions: DKS-Signalgenerator>Support</a></p>
+        ]]>"</string>
+    <string name="ic_frequency_off">Frequency hide</string>
+    <string name="ic_frequency_on">Frequecy show</string>
+    <string name="ic_phase_off">Phase hide</string>
+    <string name="ic_phase_on">Phase einblenden</string>
+    <string name="ic_signal_off">Signal hide</string>
+    <string name="ic_signal_on">Signal show</string>
+    <string name="ic_sound_off">Sound off</string>
+    <string name="ic_sound_on">Sound an</string>
+    <string name="minus">\u2212</string>
+    <string name="multiply">\u22C5</string>
+    <string name="phase_lable">"Phase:  "</string>
+    <string name="phi_lable">\u03A6=</string>
+    <string name="pi">\u03C0</string>
+    <string name="plus">\u002B</string>
+    <string name="signal_choice">Signal choice:</string>
+    <string name="signal_superpos_sound">Signal Superposition Sound:</string>
+    <string name="soundHz1">"Sound of the superpostion signal: "</string>
+    <string name="soundHz2">" Hz"</string>
+    <string name="sound_off">Sound OFF</string>
+    <string name="sound_on">Sound ON</string>
+    <string name="update_error">Update Server not found!</string>
+    <string name="update_needed">There is a newer version of this app available! Please Update!</string>
+    <string name="update_title">Update available</string>
+    <string name="x_lable">b=</string>
+</resources>

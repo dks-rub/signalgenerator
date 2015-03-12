@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\desktop\Documents\git\DKS-Signalgenerator\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="C:\Users\desktop\Documents\git\DKS-Signalgenerator\app\build\intermediates\pre-dexed\debug\classes-38437e07f7e8fc89a1b97ec8f613c74b4f6bb0ff.jar" />
+    </item>
+    <item
+        jar="C:\Users\desktop\Documents\git\DKS-Signalgenerator\app\libs\GraphView-3.1.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ffc41c72432299f41689c8f707d0d89254d59d5">
+        <dex dex="C:\Users\desktop\Documents\git\DKS-Signalgenerator\app\build\intermediates\pre-dexed\debug\GraphView-3.1.2-472c5d33be5b393b8d2b72063e7571f6b563c449.jar" />
+    </item>
+    <item
+        jar="C:\Users\desktop\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\desktop\Documents\git\DKS-Signalgenerator\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-b16e6e0c829e5454e74d072605fd8704cf414230.jar" />
+    </item>
+
+</items>

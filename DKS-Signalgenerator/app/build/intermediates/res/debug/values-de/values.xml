@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/desktop/Documents/git/DKS-Signalgenerator/app/src/main/res/values-de/spinner.xml -->
+    <eat-comment/>
+    <string-array name="operation_array">
+    	<item>\u002B</item>
+    	<item>\u2212</item>
+    	<item>\u22C5</item>
+    	<item>\u00F7</item>
+    </string-array>
+    <string-array name="signal1_array">
+        <item>Signal 1 …</item>
+        <item>sin(ax)</item>
+        <item>rect(x/2\u03C0)</item>
+        <item>Sägezahn(x/2\u03C0)</item>
+        <item>Dreieck(x/2\u03C0)</item>
+        <item>si(2\u03C0x)</item>
+        <item>111…</item>
+        <item>000…</item>
+    </string-array>
+    <string-array name="signal2_array">
+        <item>Signal 2 …</item>
+        <item>sin(bx+\u03A6)</item>
+        <item>rect(bx+\u03A6)</item>
+        <item>Sägezahn(bx+\u03A6)</item>
+        <item>Dreieck(bx+\u03A6)</item>
+        <item>si(2\u03C0(bx-\u03A6))</item>
+        <item>111…</item>
+        <item>000…</item>
+    </string-array>
+    <!-- From: file:/C:/Users/desktop/Documents/git/DKS-Signalgenerator/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-de/values.xml -->
+    <eat-comment/>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Zur Startseite"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Nach oben"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Weitere Optionen"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Fertig"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Alle ansehen"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"App auswählen"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Suchanfrage löschen"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Suchanfrage"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Suchen"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Suchanfrage senden"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Sprachsuche"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Freigeben für"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Freigeben für %s"</string>
+    <!-- From: file:/C:/Users/desktop/Documents/git/DKS-Signalgenerator/app/src/main/res/values-de/strings.xml -->
+    <eat-comment/>
+    <string name="action_about_us">Über uns</string>
+    <string name="action_help">Hilfe</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="agb_text">Die App befindet sich in der Beta-Phase!\n\nBenutzung auf eigene Gefahr!\n\nBei Problemen: support@dks.rub.de\n\nViel Spaß!</string>
+    <string name="agb_title">Achtung!</string>
+    <string name="alert_accept">Akzeptieren</string>
+    <string name="alert_decline">Ablehnen</string>
+    <string name="alert_text">Gebrauch auf eigene Gefahr!\n\nDer Lehrstuhl \"Digitale Kommunikationssysteme\" übernimmt keinerlei Haftung.</string>
+    <string name="alert_title">Haftungsausschluss</string>
+    <string name="alert_update">Update</string>
+    <string name="app_name">DKS-Signalgenerator</string>
+    <string name="comming_soon">COMMING SOON:</string>
+    <string name="divison">\u00F7</string>
+    <string name="empty"/>
+    <string name="freq_lable">  Periode:</string>
+    <string name="graph_lable">Statisches Signal 1 und veränderliches Signal 2:</string>
+    <string name="graph_sum_lable_1">"Superposition: Signal 1 "</string>
+    <string name="graph_sum_lable_2">" Signal 2"</string>
+    <string name="hint_freq">0 \u2212 50</string>
+    <string name="hint_phase">0 \u2212 2</string>
+    <string name="html_about_us">
+        "<![CDATA[
+        <h1>Lehrstuhl f&uumlr Digitale Kommunikationssysteme</h1>
+        <p>Der Lehrstuhl f&uumlr Digitale Kommunikationssysteme hat den Forschungsschwerpunkt im Bereich Informationstransfer. Darunter f&aumlllt insbesondere die Charakterisierung fundamentaler Schranken f&uumlr zuverl&aumlssige und spektral effiziente Kommunikation u.a. in the folgenden Projekten</p>
+        <ul>
+        	<li>Interferenz-Netzwerke und Alignment</li>
+        	<li>Robustes Beamforming und Angewandte Methoden der Optimierung</li>
+        	<li>Zwei-Wege Voll-Duplex Kommunikation</li><li>Physical Layer Security</li>
+    		<li>Relaying</li>
+    		<li>Mehrantennen-Systeme (MIMO) und Space-Time Coding</li>
+        	<li>Device-to-Device (D2D) und Niedrig-Latenz Kommunikation</li>
+        </ul>
+        <p>Der Lehrstuhl zeichnet sich durch intensive Kooperationen mit international in der Forschung f&uumlhrenden Universit&auml;ten aus. Ein zentralen Stellenwert nimmt der ganzheitliche Ansatz von der grundlegenden Analyse mit informationstheoretischen Mitteln bis hin zur praktischen Implementierung im Testbed mit Ger&aumlten wie</p>
+        <ul>
+        	<li>Universal Software Radio Peripheral (USRP)</li>
+        	<li>Raspberry Pi und Arduino</li>
+        </ul>
+        <p>ein.</p>
+        <br/>
+        <h2>SHK - Programmierer</h2>
+        <p>Diese App ist als studentisches Projekt von zwei SHK's entstanden.</p>
+        <a href=https://www.dks.ruhr-uni-bochum.de/de/lehrstuhl/>Tim Guenther</a>
+        <ul>
+        	<li>Management</li>
+        	<li>Design</li>
+        	<li>Programmierung</li>
+        </ul>
+        <a href=https://www.dks.ruhr-uni-bochum.de/de/lehrstuhl/>Max Hoffmann</a>
+        <ul>
+        	<li>Programmierung</li>
+        </ul>
+        <p>Fragen zur Programmierung, Feedback oder Beschwerden bitte sofort an den <a href=mailto:support@dks.rub.de?subject=Fragen zum DKS-Signalgenerator>Support</a> richten.</p>
+        ]]>"</string>
+    <string name="ic_frequency_off">Frequenz ausblenden</string>
+    <string name="ic_frequency_on">Frequenz einblenden</string>
+    <string name="ic_phase_off">Phase ausblenden</string>
+    <string name="ic_phase_on">Phase einblenden</string>
+    <string name="ic_signal_off">Signal ausblenden</string>
+    <string name="ic_signal_on">Signal einblenden</string>
+    <string name="ic_sound_off">Ton aus</string>
+    <string name="ic_sound_on">Ton an</string>
+    <string name="minus">\u2212</string>
+    <string name="multiply">\u22C5</string>
+    <string name="phase_lable">"Phase:  "</string>
+    <string name="phi_lable">\u03A6=</string>
+    <string name="pi">\u03C0</string>
+    <string name="plus">\u002B</string>
+    <string name="signal_choice">Signal choice:</string>
+    <string name="signal_superpos_sound">Signal Superposition Sound:</string>
+    <string name="soundHz1">"Ton des superpositionierten Signals: "</string>
+    <string name="soundHz2">" Hz"</string>
+    <string name="sound_off">Sound OFF</string>
+    <string name="sound_on">Sound ON</string>
+    <string name="update_error">Keine Verbindung zum Update Server!</string>
+    <string name="update_needed">Es gibt eine neuere Version der App! Bitte Update runterladen!</string>
+    <string name="update_title">Update verfügbar</string>
+    <string name="x_lable">b=</string>
+</resources>
