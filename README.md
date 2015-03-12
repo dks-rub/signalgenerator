@@ -1,11 +1,11 @@
 # DKS-Signalgenerator
 Der DKS-Signalgenerator entstand 2013 als eine Lehr-App fuer die Vorlesung Systemtheorie 2 (ehemalig Siganle und Systeme 2).
 
-## Import in Eclipse
-1. `git clone git@git.c0okies.com:dks/signalgenerator.git`
-2. `Import > Android > Existing Android Code Into Workspace`
-3. `Browse` das Repository komplett auswaehlen. (**Wichtig**: `appcompat_v7` muss auch importiert werden.)
-4. Warten bis alle Initialisierungen beendet sind.
+## Import in Android Studio
+1. `git clone git@github.com:dks-rub/signalgenerator.gitt`
+2. `Open an exisiting Android Studio project`
+  3. Im Repo den Ordner `DKS-ForierAnalyzer` auswahelen.
+4. Android Studio schlaegt vor den `sdk`-Pfad zu aendern. Das kann an dem System liegen auf dem vorher entwickelt wurde.
 
 ## Lizenzen
 Fuer diese Projekt verwenden wir als externe Bibliothek zum darstellen der Graphen 
