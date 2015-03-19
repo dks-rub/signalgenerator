@@ -1,6 +1,10 @@
 package de.rub.dks.signal.generator.sound;
 
 import com.jjoe64.graphview.GraphView.GraphViewData;
+/*
+ * Basic Signal class for providing all kinds of signal-data to the GUI.
+ * Extend this class and implement the calculate method which is used by all the other methods.
+*/
 
 public abstract class Signal {
 	public static final int GRAPH_SAMPLES = 800;
@@ -25,13 +29,27 @@ public abstract class Signal {
 	public void setPhase(double ph) {
 		this.ph = ph;
 	}
-
+	
+	/**
+     	* Calculates the signals value at given frequency and phase
+     	* @param freq   the signal's frequency
+     	* @param phase	the signal's phase
+     	*/
 	public abstract double calculate(double freq, double phase);
 
+	/**
+     	* Calculates the signals value with the last used frequency and phase
+     	*/
 	public double calculate() {
 		return calculate(fr, ph);
 	}
 
+	/**
+     	* Generates a GraphViewData array with GRAPH_SAMPLES entries.
+     	* @param freq   the signal's frequency
+     	* @param phase	the signal's phase
+     	* @return    	the samples
+     	*/
 	public GraphViewData[] getGraphData(double freq, double phase) {
 		fr = freq;
 		ph = phase;
@@ -45,6 +63,12 @@ public abstract class Signal {
 		return data;
 	}
 
+	/**
+     	* Generates a byte array with BUFFER_SIZE samples to be played back, resembling the sound of the signal.
+     	* @param freq   the signal's frequency
+     	* @param phase	the signal's phase
+     	* @return    	the samples
+     	*/
 	public byte[] getAudioBytes(double freq, double phase) {
 		fr = freq;
 		ph = phase;
