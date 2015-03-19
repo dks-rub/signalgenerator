@@ -13,22 +13,6 @@ public abstract class Signal {
 	public static final byte AMPLITUDE = Byte.MAX_VALUE;
 
 	protected double audioPos, fr, ph;
-
-	public double getFreq() {
-		return fr;
-	}
-
-	public void setFreq(double fr) {
-		this.fr = fr;
-	}
-
-	public double getPhase() {
-		return ph;
-	}
-
-	public void setPhase(double ph) {
-		this.ph = ph;
-	}
 	
 	/**
      	* Calculates the signals value at given frequency and phase
@@ -46,6 +30,7 @@ public abstract class Signal {
 
 	/**
      	* Generates a GraphViewData array with GRAPH_SAMPLES entries.
+     	* This method also sets the internal phase and frequency to those passed in the parameters.
      	* @param freq   the signal's frequency
      	* @param phase	the signal's phase
      	* @return    	the samples
@@ -65,6 +50,7 @@ public abstract class Signal {
 
 	/**
      	* Generates a byte array with BUFFER_SIZE samples to be played back, resembling the sound of the signal.
+     	* This method also sets the internal phase and frequency to those passed in the parameters.
      	* @param freq   the signal's frequency
      	* @param phase	the signal's phase
      	* @return    	the samples
@@ -79,6 +65,24 @@ public abstract class Signal {
 			audioPos += 440 * freq / SAMPLE_RATE;
 		}
 		return samples;
+	}
+	
+	// Getters and setters for the internal variables
+	
+	public double getFreq() {
+		return fr;
+	}
+
+	public void setFreq(double fr) {
+		this.fr = fr;
+	}
+
+	public double getPhase() {
+		return ph;
+	}
+
+	public void setPhase(double ph) {
+		this.ph = ph;
 	}
 
 }
