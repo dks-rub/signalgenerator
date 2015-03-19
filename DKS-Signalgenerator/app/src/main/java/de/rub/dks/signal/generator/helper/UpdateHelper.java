@@ -25,6 +25,9 @@ import android.util.Log;
 import android.widget.Toast;
 import de.rub.dks.signal.generator.R;
 
+/*
+* Class to communicate with the DKS server to check for app updates.
+*/
 public class UpdateHelper {
 	private final static String SERVERNAME = "http://pgfplots.dks.ruhr-uni-bochum.de/update_android.php"; // Update webservice
 	private final static String SERVER = "https://www.dks.ruhr-uni-bochum.de/de/"; // Update website
@@ -86,7 +89,9 @@ public class UpdateHelper {
 		return error;
 	}
 	
-	//Start the thread for the update check
+	/**
+	* Starts a thread which will check whether a newer version of this app is available and notifies the user.
+	*/
 	public void startThread(){
 		try {
 			new Thread(new Runnable() {
