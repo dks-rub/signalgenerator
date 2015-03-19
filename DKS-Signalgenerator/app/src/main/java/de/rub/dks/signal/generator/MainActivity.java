@@ -62,7 +62,7 @@ import de.rub.dks.signal.generator.sound.arithmetic.MultiplySignal;
 import de.rub.dks.signal.generator.sound.arithmetic.SumSignal;
 
 /**
- * 
+ * The main activity, handling all the GUI and applies the selected signals' data.
  * @author Tim Guenther, Max Hoffmann
  * @version 0.0.1
  * @since 01.07.2014
@@ -135,20 +135,20 @@ public class MainActivity extends ActionBarActivity {
 
 	/**
 	 * Recalculates the graph-series:
-	 * 
 	 * Generates new series with new offset in phase and frequency.
-	 * 
+	 * This will also be applied to the GUI.
 	 */
 	private void recalculateGraphs() {
+		// recalculate dynamic signal
 		GraphViewData[] data = signal2.getGraphData(selectedFreq, selectedPhase);
 		seriesSinMod.resetData(data);
-
+		// recalculate static signal
 		data = signal1.getGraphData(selectedFreq1, 0);
 		seriesSinStatic.resetData(data);
-
+		// recalculate arithmetic signal
 		data = arithmeticSignal.getGraphData();
 		seriesSum.resetData(data);
-
+		// update labels
 		if (!typing) {
 			actionByCode = true;
 			phase_txt.setText("" + round(selectedPhase / Math.PI));
@@ -558,13 +558,13 @@ public class MainActivity extends ActionBarActivity {
 		});
 		
 
-		// Two Grids for displaying different sin curves
-		// Displays one static sin curve and one with alternating phase and
-		// frequency modified by user
+		// Two Grids for displaying different signals
+		// Displays one static signal and one with alternating phase and
+		// frequency modified by the user
 		graphView = new LineGraphView(getApplicationContext(), getString(R.string.graph_lable));
 		sumGraphView = new LineGraphView(getApplicationContext(), getString(R.string.graph_sum_lable_1) + getString(R.string.plus) + getString(R.string.graph_sum_lable_2));
 
-		// GraphViewData is container for raw graph data
+		// GraphViewData is a container for raw graph data
 		GraphViewData[] dataStatic = new GraphViewData[Signal.GRAPH_SAMPLES];
 		for (int i = 0; i < Signal.GRAPH_SAMPLES; i++) {
 			dataStatic[i] = new GraphViewData(i, 0);
@@ -663,26 +663,22 @@ public class MainActivity extends ActionBarActivity {
 			}
 		});
 
+		// create audio playback thread
 		t = new Thread() {
 			@Override
 			public void run() {
 				// create an audiotrack object
 				AudioTrack audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC, Signal.SAMPLE_RATE, AudioFormat.CHANNEL_OUT_MONO, AudioFormat.ENCODING_PCM_16BIT, Signal.BUFFER_SIZE, AudioTrack.MODE_STREAM);
-
 				byte samples[] = new byte[Signal.BUFFER_SIZE];
 				byte samples_zero[] = new byte[Signal.BUFFER_SIZE];
-				// start audio
+				// initiate playback
 				audioTrack.write(samples_zero, 0, Signal.BUFFER_SIZE);
 				audioTrack.play();
-
 				// synthesis loop
 				while (isRunning) {
-					if (toggleSound) {
+					if (toggleSound) { // sound is activated -> write audio bytes
 						samples = arithmeticSignal.getAudioBytes();
 						audioTrack.write(samples, 0, Signal.BUFFER_SIZE);
-						// } else {
-						// audioTrack.write(samples_zero, 0,
-						// Signal.BUFFER_SIZE);
 					}
 				}
 				audioTrack.stop();
@@ -701,7 +697,7 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
-
+		// toggle buttons to hide GUI elements
 		if (item.getItemId() == R.id.action_signal) {
 			if (toggleSignal) {
 				item.setIcon(R.drawable.ic_action_signal_white_on);
@@ -737,7 +733,9 @@ public class MainActivity extends ActionBarActivity {
 				togglePhase = !togglePhase;
 			}
 			return true;
-		} else if (item.getItemId() == R.id.action_sound) {
+		} 
+		// toggle button to toggle the sound state
+		else if (item.getItemId() == R.id.action_sound) {
 			SharedPreferences sPref = this.getSharedPreferences(sharedPref, Context.MODE_PRIVATE);
 			final MenuItem itemTransfer = item;
 			// ALERTDIALOG: Executed only on first Sound run.
